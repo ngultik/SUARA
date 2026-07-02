@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SUARA | Ruang Aman Aspirasi</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<style>
+
+/* ================= GLOBAL ================= */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:
+radial-gradient(circle at top left, #dbe9ff 0%, transparent 40%),
+radial-gradient(circle at bottom right, #ffd6f3 0%, transparent 45%),
+linear-gradient(135deg, #f7faff, #ffffff);
+overflow-x:hidden;
+}
+
+/* ================= NAV ================= */
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:8px 5%;
+background:white;
+position:sticky;
+top:0;
+z-index:999;
+box-shadow:0 4px 20px rgba(0,0,0,0.05);
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo img{
+width:42px;
+}
+
+.logo h2{
+color:#017aff;
+letter-spacing:1px;
+}
+
+
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:#333;
+font-weight:500;
+}
+
+nav a:hover{
+color:#017aff;
+}
+
+nav{
+background: rgba(255,255,255,0.7);
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.logo-text small{
+font-size:11px;
+color:#6b7280;
+display:block;
+margin-top:-2px;
+}
+
+.nav-btn{
+padding:8px 16px;
+background:linear-gradient(135deg,#017aff,#f77cf1);
+color:white;
+border-radius:20px;
+font-size:13px;
+text-decoration:none;
+font-weight:500;
+margin-left:15px;
+}
+
+body{
+background: linear-gradient(135deg, #f6f9ff 0%, #eef4ff 40%, #fff0f8 100%);
+position:relative;
+overflow-x:hidden;
+}
+
+/* ===== decorative blobs ===== */
+body::before,
+body::after{
+content:"";
+position:absolute;
+width:400px;
+height:400px;
+border-radius:50%;
+filter:blur(100px);
+opacity:0.4;
+z-index:-1;
+}
+
+body::before{
+background:#017aff;
+top:-100px;
+left:-120px;
+}
+
+body::after{
+background:#f77cf1;
+bottom:-120px;
+right:-120px;
+}
+
+/* ================= HERO ================= */
+.hero{
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:10px 3%;
+position:relative;
+}
+
+.hero-content{
+max-width:850px;
+}
+
+.top-badge{
+display:inline-block;
+padding:6px 14px;
+background:#eef4ff;
+color:#017aff;
+border-radius:20px;
+font-size:13px;
+font-weight:500;
+margin-bottom:15px;
+}
+
+.hero h1{
+font-size:90px;
+color:#017aff;
+font-weight:1000;
+letter-spacing:1px;
+margin-bottom:-30px;
+}
+
+.hero h3{
+font-size:20px;
+color:#f77cf1;
+font-weight:500;
+margin-bottom:20px;
+}
+
+.hero-desc{
+font-size:16px;
+color:#6b7280;
+max-width:600px;
+margin:0 auto 20px;
+line-height:1.7;
+}
+
+.trust-badge{
+display:inline-block;
+padding:8px 16px;
+background:white;
+border:1px solid rgba(0,0,0,0.05);
+border-radius:25px;
+font-size:13px;
+color:#555;
+margin-bottom:20px;
+box-shadow:0 6px 20px rgba(0,0,0,0.05);
+}
+
+.hero-quote{
+background:linear-gradient(135deg,#017aff,#f77cf1);
+color:white;
+padding:20px;
+border-radius:16px;
+margin:20px auto;
+max-width:600px;
+font-size:14px;
+line-height:1.6;
+}
+
+.hero-quotes{
+background:linear-gradient(135deg,#017aff,#f77cf1);
+color:white;
+padding:20px;
+border-radius:16px;
+margin:20px auto;
+max-width:600px;
+font-size:14px;
+line-height:1.6;
+}
+
+.hero-purpose{
+margin-top:15px;
+padding:15px;
+border-radius:14px;
+background:#017aff;
+backdrop-filter:blur(10px);
+border:1px solid rgba(0,0,0,0.05);
+font-size:14px;
+color:#fde7fc ;
+line-height:1.5;
+}
+
+.hero-btns{
+display:flex;
+gap:15px;
+justify-content:center;
+flex-wrap:wrap;
+margin-top:25px;
+}
+
+
+.btn-outline{
+padding:12px 25px;
+border-radius:30px;
+border:1px solid #017aff;
+color:#017aff;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+}
+
+.btn-outline:hover{
+background:#017aff;
+color:white;
+}
+
+/* QUOTE */
+.quote{
+margin-top:30px;
+background:linear-gradient(135deg,#017aff,#f77cf1);
+color:white;
+padding:25px;
+border-radius:18px;
+max-width:650px;
+margin-left:auto;
+margin-right:auto;
+}
+
+/* BUTTON */
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:13px 28px;
+background:linear-gradient(90deg,#017aff,#f77cf1);
+color:white;
+border-radius:30px;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:translateY(-2px);
+}
+
+.btn{
+background: #f77cf1 ;
+background-size:200% 200%;
+animation: gradientMove 6s ease infinite;
+box-shadow:0 10px 25px rgba(1,122,255,0.25);
+}
+
+@keyframes gradientMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* ================= SECTION ================= */
+section{
+padding:40px 2%;
+}
+
+.title{
+text-align:center;
+font-size:40px;
+color:#017aff;
+margin-bottom:10px;
+}
+
+.subtitle{
+text-align:center;
+color:#666;
+max-width:700px;
+margin:auto;
+}
+
+/* ================= CARDS ================= */
+.card{
+background: rgba(255,255,255,0.6);
+backdrop-filter: blur(12px);
+-webkit-backdrop-filter: blur(12px);
+border: 1px solid rgba(255,255,255,0.4);
+border-radius:18px;
+padding:22px;
+box-shadow:0 10px 30px rgba(0,0,0,0.06);
+transition:0.3s ease;
+}
+
+.card:hover{
+transform: translateY(-6px);
+box-shadow:0 20px 40px rgba(0,0,0,0.10);
+}
+
+.grid-2{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+margin-top:10px;
+}
+
+.big-card{
+background:white;
+padding:30px;
+border-radius:30px;
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
+
+.big-card h3{
+color:#017aff;
+margin-bottom:10px;
+font-size:20px;
+}
+
+.big-card p{
+color:#555;
+line-height:1.7;
+}
+
+.big-card.highlight{
+background:linear-gradient(135deg,#017aff,#f77cf1);
+color:white;
+}
+
+.big-card.highlight h3,
+.big-card.highlight p{
+color:white;
+}
+
+.feature-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.feature-card{
+background:rgba(255,255,255,0.7);
+backdrop-filter:blur(12px);
+-webkit-backdrop-filter:blur(12px);
+border:1px solid rgba(0,0,0,0.05);
+border-radius:18px;
+padding:28px;
+text-align:center;
+transition:0.3s ease;
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
+
+.feature-card:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(0,0,0,0.08);
+}
+
+.feature-card .icon{
+font-size:28px;
+margin-bottom:12px;
+}
+
+.feature-card h3{
+color:#017aff;
+margin-bottom:10px;
+font-size:18px;
+}
+
+.feature-card p{
+color:#6b7280;
+font-size:14px;
+line-height:1.6;
+}
+
+.edu-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-top:30px;
+}
+
+
+
+
+/* ================= FORM ================= */
+.form-box{
+max-width:750px;
+margin:40px auto 0;
+background:white;
+padding:30px;
+border-radius:18px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.input{
+width:100%;
+padding:14px;
+margin-top:12px;
+border-radius:10px;
+border:1px solid #ddd;
+font-size:14px;
+outline:none;
+}
+
+textarea{
+height:160px;
+resize:none;
+}
+
+button{
+width:100%;
+margin-top:15px;
+padding:14px;
+border:none;
+border-radius:30px;
+background:linear-gradient(90deg,#017aff,#f77cf1);
+color:white;
+font-weight:600;
+cursor:pointer;
+}
+
+/* ================= CONTACT ================= */
+.contact{
+text-align:center;
+padding:50px 3%;
+}
+
+.contact h2{
+font-size:40px;
+color:#017aff;
+margin-bottom:10px;
+}
+
+.contact .subtitle{
+color:#6b7280;
+margin-bottom:40px;
+}
+
+.social-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+gap:20px;
+max-width:800px;
+margin:auto;
+}
+
+.social-card{
+background:rgba(255,255,255,0.7);
+backdrop-filter:blur(10px);
+-webkit-backdrop-filter:blur(10px);
+border:1px solid rgba(0,0,0,0.05);
+border-radius:16px;
+padding:20px;
+text-decoration:none;
+color:#333;
+transition:0.3s ease;
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
+
+.social-card i{
+font-size:40px;
+display:block;
+margin-bottom:10px;
+transition:0.3s;
+}
+
+/* WhatsApp */
+.social-card:nth-child(1) i{
+color:#25D366;
+}
+
+/* Instagram */
+.social-card:nth-child(2) i{
+color:#E4405F;
+}
+
+/* TikTok */
+.social-card:nth-child(3) i{
+color:#000000;
+}
+
+/* YouTube */
+.social-card:nth-child(4) i{
+color:#FF0000;
+}
+
+/* Email */
+.social-card:nth-child(5) i{
+color:#017aff;
+}
+
+.social-card p{
+font-size:14px;
+margin:0;
+}
+
+.social-card:hover{
+transform:translateY(-6px);
+box-shadow:0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* ================= FOOTER ================= */
+footer{
+text-align:center;
+padding:25px;
+background:#017aff;
+color:white;
+margin-top:60px;
+}
+
+/* ================= RESPONSIVE ================= */
+.edu-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:22px;
+margin-top:30px;
+}
+
+.edu-card{
+background:rgba(255,255,255,0.75);
+backdrop-filter:blur(12px);
+-webkit-backdrop-filter:blur(12px);
+border:1px solid rgba(0,0,0,0.06);
+border-radius:18px;
+padding:24px;
+text-decoration:none;
+color:#333;
+transition:0.3s ease;
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
+position:relative;
+overflow:hidden;
+}
+
+.edu-card::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:3px;
+background:linear-gradient(90deg,#017aff,#f77cf1);
+opacity:0;
+transition:0.3s;
+}
+
+.edu-card:hover::before{
+opacity:1;
+}
+
+.edu-card:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(0,0,0,0.08);
+}
+
+.edu-card h3{
+color:#017aff;
+margin-bottom:10px;
+font-size:18px;
+}
+
+.edu-card p{
+font-size:14px;
+color:#6b7280;
+line-height:1.5;
+}
+
+#edukasi h2{
+text-align:center;
+font-size:40px;
+color:#017aff;
+margin-bottom:10px;
+}
+
+#edukasi .subtitle{
+text-align:center;
+color:#6b7280;
+margin-bottom:20px;
+}
+
+.review-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+margin-top:30px;
+}
+
+.review-card{
+background:white;
+border-radius:18px;
+padding:25px;
+box-shadow:0 10px 25px rgba(0,0,0,.06);
+transition:.3s;
+}
+
+.review-card:hover{
+transform:translateY(-6px);
+}
+
+.review-rating{
+font-size:22px;
+margin-bottom:12px;
+}
+
+.review-text{
+color:#555;
+line-height:1.7;
+font-style:italic;
+margin-bottom:15px;
+}
+
+.review-name{
+font-weight:600;
+color:#017aff;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+<div class="logo">
+  <img src="logongultik.png">
+  <div class="logo-text">
+    <h2>SUARA</h2>
+    <small>Ruang Aman Aspirasi by Ngultik</small>
+  </div>
+</div>
+
+<ul>
+    <a href="#lapor" class="nav-btn">Lapor</a>
+    <a href="#edukasi" class="nav-btn">Edukasi</a>
+    <a href="#Tentang" class="nav-btn">Tentang</a>
+    <a href="#ulasan" class="nav-btn">Ulasan</a>
+    <a href="#kontak" class="nav-btn">Kontak</a>
+
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+
+  <div class="hero-content">
+
+   <h1>SUARA</h1>
+
+<h3>(Sarana Umum Aspirasi dan Ruang Aman)</h3>
+
+<p class="hero-desc">
+Platform pengaduan aman untuk kasus bullying, kekerasan, pelecehan, dan situasi tidak nyaman lainnya.
+Semua laporan bersifat rahasia dan tanpa penilaian.
+</p>
+
+    <div class="trust-badge">
+      🔒 Rahasia • 🤍 Aman • 🧠 Tanpa Penilaian
+    </div>
+
+    <div class="hero-quote">
+      “Kamu tidak harus menghadapi semuanya sendirian.
+      Ceritamu penting dan layak didengar.”
+    </div>
+
+    <div class="hero-purpose">
+  <p><b>SUARA bukan media sosial.</b></p>
+  <p>Ini adalah ruang aman untuk melaporkan kejadian yang kamu alami atau saksikan.</p>
+</div>
+
+<div class="hero-quotes">
+      <p>Tanpa dipungut biaya sepeserpun</p>
+      <p>Kamu bebas bercerita disini, kami siap mendengarkan.</p>
+    </div>
+
+    <div class="hero-btns">
+      <a href="#lapor" class="btn">Mulai Cerita</a>
+      <a href="#Tentang" class="btn">Pelajari Lebih Lanjut</a>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- ABOUT -->
+.<section id="Tentang">
+
+<h2 class="title">TENTANG SUARA</h2>
+
+<!-- VALUE BLOCK -->
+<div class="grid-2">
+
+<div class="big-card">
+<h3>Apa itu SUARA?</h3>
+<p>
+SUARA (Sarana Umum Aspirasi dan Ruang Aman) adalah program dari Ngultik
+yang menyediakan sistem pelaporan aman untuk kasus bullying, kekerasan,
+diskriminasi, dan situasi tidak nyaman lainnya.
+</p>
+</div>
+
+<div class="big-card highlight">
+<h3>Komitmen Kami</h3>
+<p>
+Kami berkomitmen menjaga kerahasiaan, mendengarkan tanpa menghakimi,
+dan memberikan ruang aman bagi setiap cerita yang masuk.
+</p>
+</div>
+
+</div>
+
+<!-- FEATURES -->
+<div class="feature-grid">
+
+<div class="feature-card">
+<div class="icon">🔒</div>
+<h3>Ruang Rahasia</h3>
+<p>Cerita kamu aman dan tidak akan dipublikasikan dalam bentuk apa pun. kecuali dengan izin kamu.</p>
+</div>
+
+<div class="feature-card">
+<div class="icon">🧠</div>
+<h3>Tanpa Penilaian</h3>
+<p>Kamu bisa bercerita tanpa takut dihakimi atau disalahkan.</p>
+</div>
+
+<div class="feature-card">
+<div class="icon">💬</div>
+<h3>Didengar Serius</h3>
+<p>Setiap laporan dibaca dengan perhatian dan ditindaklanjuti secara hati-hati.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="edukasi">
+
+<h2>Edukasi & Informasi</h2>
+<p class="subtitle">Pelajari isu penting di sekitar kita</p>
+
+<div class="edu-grid">
+
+<a href="bullying.html" class="edu-card">
+<h3>🧠 Bullying</h3>
+<p>Kenali bentuk dan dampaknya</p>
+</a>
+
+<a href="kekerasan.html" class="edu-card">
+<h3>⚠️ Kekerasan</h3>
+<p>Pahami jenis dan cara menghadapinya</p>
+</a>
+
+<a href="seksual.html" class="edu-card">
+<h3>🛡️ Pelecehan Seksual</h3>
+<p>Ketahui tanda dan langkah perlindungan</p>
+</a>
+
+</div>
+
+</section>
+
+<!-- FORM -->
+<section id="lapor">
+
+<h2 class="title">Tempat Cerita</h2>
+<p class="subtitle">Cerita kamu akan langsung dikirim ke WhatsApp admin SUARA.</p>
+
+<div class="form-box">
+
+<form id="waForm">
+
+<input class="input" id="nama" placeholder="Nama (boleh anonim)" required>
+
+<input class="input" id="publikasi" placeholder="Bersedia untuk di publikasikan? (Ya/Tidak)">
+
+<input class="input" id="lanjutan" placeholder="Ingin ada pertemuan lanjutan? (Ya/Tidak)" required>
+
+<textarea class="input" id="cerita" placeholder="Ceritakan kejadian..." required></textarea>
+
+<button type="submit">Kirim Laporan</button>
+
+</form>
+
+</div>
+
+</section>
+
+
+<section id="ulasan">
+
+<h2 class="title">Apa Kata Mereka?</h2>
+
+<p class="subtitle">
+Cerita dari orang-orang yang telah menggunakan SUARA.
+</p>
+
+<div id="reviewContainer" class="review-grid">
+</div>
+
+<div class="form-box" style="margin-top:40px;">
+
+<h3 style="text-align:center;color:#017aff;margin-bottom:20px;">
+Bagikan Pengalamanmu
+</h3>
+
+<input class="input" id="reviewNama" placeholder="Nama (boleh anonim)">
+
+<select class="input" id="reviewRating">
+<option value="5">⭐⭐⭐⭐⭐</option>
+<option value="4">⭐⭐⭐⭐</option>
+<option value="3">⭐⭐⭐</option>
+<option value="2">⭐⭐</option>
+<option value="1">⭐</option>
+</select>
+
+<textarea
+class="input"
+id="reviewUlasan"
+placeholder="Tulis pengalamanmu menggunakan SUARA..."
+></textarea>
+
+<button onclick="kirimUlasan()">
+Kirim Ulasan
+</button>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="kontak" class="contact">
+
+<h2>Kontak SUARA</h2>
+<p class="subtitle">Terhubung dengan kami melalui platform berikut</p>
+
+<div class="social-grid">
+
+<a href="https://wa.me/6288987219363" class="social-card" target="_blank">
+<i class="fa-brands fa-whatsapp"></i>
+<p>WhatsApp</p>
+</a>
+
+<a href="https://instagram.com/ngultikcom" class="social-card" target="_blank">
+<i class="fa-brands fa-instagram"></i>
+<p>Instagram</p>
+</a>
+
+<a href="https://www.tiktok.com/@ngultikcom" class="social-card" target="_blank">
+<i class="fa-brands fa-tiktok"></i>
+<p>TikTok</p>
+</a>
+
+<a href="https://youtube.com/@ngultikcom" class="social-card" target="_blank">
+<i class="fa-brands fa-youtube"></i>
+<p>YouTube</p>
+</a>
+
+<a href="mailto:ngultik@gmail.com" class="social-card">
+<i class="fa-solid fa-envelope"></i>
+<p>Email</p>
+</a>
+
+</div>
+
+</div>
+
+
+</section>
+
+<footer>
+© 2026 SUARA by Ngultik
+</footer>
+
+<script>
+document.getElementById("waForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  let nama = document.getElementById("nama").value;
+  let publikasi = document.getElementById("publikasi").value;
+  let lanjutan = document.getElementById("lanjutan").value;
+  let cerita = document.getElementById("cerita").value;
+
+  let nomorWA = "6288987219363"; 
+
+  let pesan = 
+`Halo Admin SUARA, ikut berbagi yaa..
+
+Nama: ${nama}
+Publikasi: ${publikasi}
+Lanjutan: ${lanjutan}
+
+Cerita:
+${cerita}`;
+
+  let url = "https://wa.me/" + nomorWA + "?text=" + encodeURIComponent(pesan);
+
+  window.open(url, "_blank");
+});
+
+fetch("https://script.google.com/macros/s/AKfycbySEvS0io5BYq3aYnqKRNuIxQdcCKmNxZr6CWsdOip2i7dJIq7HNVmJDJjmn9BGhf5r/exec")
+.then(res => res.json())
+.then(data => {
+
+const container = document.getElementById("reviewContainer");
+
+container.innerHTML = "";
+
+data.reverse().forEach(item => {
+
+container.innerHTML += `
+<div class="review-card">
+
+<div class="review-rating">
+${"⭐".repeat(Number(item.rating))}
+</div>
+
+<div class="review-text">
+"${item.ulasan}"
+</div>
+
+<div class="review-name">
+— ${item.nama ? item.nama : "Anonim"}
+</div>
+`;
+
+});
+
+})
+.catch(err => console.log(err));
+
+function kirimUlasan(){
+
+const nama = document.getElementById("reviewNama").value || "Anonim";
+const rating = document.getElementById("reviewRating").value;
+const ulasan = document.getElementById("reviewUlasan").value;
+
+fetch("https://script.google.com/macros/s/AKfycbySEvS0io5BYq3aYnqKRNuIxQdcCKmNxZr6CWsdOip2i7dJIq7HNVmJDJjmn9BGhf5r/exec", {
+  method: "POST",
+  mode: "no-cors",
+  headers: {
+    "Content-Type": "text/plain;charset=utf-8"
+  },
+  body: JSON.stringify({
+    nama: nama,
+    ulasan: ulasan,
+    rating: rating
+  })
+})
+.then(() => {
+
+  alert("Terima kasih atas ulasannya ❤️");
+
+  location.reload();
+
+})
+.catch(err => {
+  console.log(err);
+  alert("Gagal mengirim.");
+});
+}
+
+</script>
+
+</body>
+</html>
