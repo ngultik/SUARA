@@ -643,28 +643,157 @@ font-weight:600;
 color:#017aff;
 }
 
+/* ================= NAVBAR BURGER ================= */
+
+.menu-toggle{
+  display:none;
+  background:transparent;
+  border:none;
+  color:#017aff;
+  font-size:26px;
+  cursor:pointer;
+  width:auto;
+  margin:0;
+  padding:5px;
+}
+
+/* Desktop */
+nav ul{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+nav ul li{
+  list-style:none;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px){
+
+  nav{
+    padding:8px 5%;
+    min-height:60px;
+    position:sticky;
+  }
+
+  .logo img{
+    width:38px;
+  }
+
+  .logo{
+    gap:8px;
+  }
+
+  .logo h2{
+    font-size:20px;
+  }
+
+  .logo-text small{
+    font-size:9px;
+  }
+
+  /* tampilkan burger */
+  .menu-toggle{
+    display:block;
+    z-index:1001;
+  }
+
+  /* sembunyikan menu */
+  nav ul{
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+
+    display:none;
+    flex-direction:column;
+    align-items:stretch;
+    gap:0;
+
+    background:rgba(255,255,255,0.97);
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
+
+    padding:15px 5%;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+
+    border-top:1px solid rgba(0,0,0,0.05);
+  }
+
+  /* menu aktif */
+  nav ul.active{
+    display:flex;
+  }
+
+  nav ul li{
+    width:100%;
+  }
+
+  nav ul li .nav-btn{
+    display:block;
+    width:100%;
+    text-align:center;
+
+    margin:5px 0;
+    padding:11px 15px;
+
+    border-radius:15px;
+  }
+
+  /* ukuran hero agar tidak terlalu besar di HP */
+  .hero h1{
+    font-size:55px;
+  }
+
+  .hero h3{
+    font-size:16px;
+  }
+}
+
 </style>
 </head>
 
 <body>
 
 <!-- NAV -->
+<!-- NAV -->
 <nav>
-<div class="logo">
-  <img src="logongultik.png">
-  <div class="logo-text">
-    <h2>SUARA</h2>
-    <small>Ruang Aman Aspirasi by Ngultik</small>
+  <div class="logo">
+    <img src="logongultik.png">
+    <div class="logo-text">
+      <h2>SUARA</h2>
+      <small>Ruang Aman Aspirasi by Ngultik</small>
+    </div>
   </div>
-</div>
 
-<ul>
-    <a href="#lapor" class="nav-btn">Lapor</a>
-    <a href="#edukasi" class="nav-btn">Edukasi</a>
-    <a href="#Tentang" class="nav-btn">Tentang</a>
-    <a href="#ulasan" class="nav-btn">Ulasan</a>
-    <a href="#kontak" class="nav-btn">Kontak</a>
+  <!-- Burger Button -->
+  <button class="menu-toggle" id="menuToggle">
+    <i class="fas fa-bars"></i>
+  </button>
 
+  <!-- Navigation -->
+  <ul id="navMenu">
+    <li>
+      <a href="#lapor" class="nav-btn">Lapor</a>
+    </li>
+    <li>
+      <a href="#edukasi" class="nav-btn">Edukasi</a>
+    </li>
+    <li>
+      <a href="#Tentang" class="nav-btn">Tentang</a>
+    </li>
+    <li>
+      <a href="#ulasan" class="nav-btn">Ulasan</a>
+    </li>
+    <li>
+      <a href="#kontak" class="nav-btn">Kontak</a>
+    </li>
+  </ul>
 </nav>
 
 <!-- HERO -->
@@ -906,6 +1035,41 @@ Kirim Ulasan
 </footer>
 
 <script>
+
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
+
+menuToggle.addEventListener("click", function(){
+
+  navMenu.classList.toggle("active");
+
+  const icon = menuToggle.querySelector("i");
+
+  if(navMenu.classList.contains("active")){
+    icon.classList.remove("fa-bars");
+    icon.classList.add("fa-xmark");
+  }else{
+    icon.classList.remove("fa-xmark");
+    icon.classList.add("fa-bars");
+  }
+
+});
+
+document.querySelectorAll("#navMenu a").forEach(link => {
+
+  link.addEventListener("click", function(){
+
+    navMenu.classList.remove("active");
+
+    const icon = menuToggle.querySelector("i");
+
+    icon.classList.remove("fa-xmark");
+    icon.classList.add("fa-bars");
+
+  });
+
+});
+
 document.getElementById("waForm").addEventListener("submit", function(e){
   e.preventDefault();
 
@@ -996,4 +1160,4 @@ fetch("https://script.google.com/macros/s/AKfycbySEvS0io5BYq3aYnqKRNuIxQdcCKmNxZ
 </script>
 
 </body>
-</html>
+</html>s  
